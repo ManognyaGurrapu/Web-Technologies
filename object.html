@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*object creation 
+        let student={
+            rollno: 501,
+            Name: "Manognya",
+            greet:function(){
+                return "hello!"
+            },
+            myMarks:[60,50,20,45]
+        }*/
+        //object creation using instance
+        /*let student=new Object();
+        student.rollno=501;
+        student.name="Manognya";
+        console.log(student.name);
+        console.log(student.rollno);*/
+        //object creation using constructor
+        /*function student(rollno,name){
+            this.rollno=rollno,
+            this.name=name;
+        }
+        let s=new student(501,"Manognya");
+        console.log(s.rollno+" "+s.name)*/
+
+        let(roll,...rest)=student;
+        console.log(roll);
+        console.log(rest.name);
+        console.log(rest.grade);
+        console.log(rest.dept);
+    </script>
+</body>
+</html>

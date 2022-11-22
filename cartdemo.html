@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cart=[{title:"bookone",dec:"this is book one"},
+        {title:"booktwo",dec:"this is book two"}]
+
+        function getBooks(){
+            setTimeout(()=>{
+            let result='';
+            cart.forEach((book)=>{
+                result=result+book.title;
+            })
+            console.log(result);
+        },2000)
+    }
+
+    function addBook(book,callback){
+        setTimeout(()=>{
+            cart.push(book);
+            callback();
+        },3000)
+    }
+        getBooks();
+
+        addBook({title:"bookThree",desc:"this is third book"},getBooks)
+
+    </script>
+</body>
+</html>

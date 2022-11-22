@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*let  map= new Map();
+        map.set('1',"one");
+        map.set(1,"one");
+        map.set(true,"True");
+        //map.set(true,"Two");
+
+        console.log(map.get(true));//value of a key
+        console.log(map.size)//3
+        console.log(map.has(1));//true
+        console.log(map.has(2));//false
+        map.delete(true);//deleting the entry true
+        console.log(map);//printing map after deleting*/
+        let recipeMap=new Map([
+            ['cucumber',500],['tomatoes',350],['onion',50]
+        ]);
+        for(let veg of recipeMap){
+            console.log(veg);
+        }
+        for(let veg of recipeMap.keys()){
+            console.log(veg);
+        }
+        for(let veg of recipeMap.values()){
+            console.log(veg);
+        }
+
+    </script>
+</body>
+</html>

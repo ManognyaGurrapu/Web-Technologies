@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let movieArray=['Hello','Brahmotsavam','Agnyatavasi','Radhe Shyam'];
+        function movieIterator(movies){
+            let index=0;
+            return{
+                next: function(){
+                    if(index<movies.length){
+                        return{
+                            value: movies[index++],
+                            done: false
+                        }
+                    }
+                    else{
+                        return{
+                            done: true
+                        }
+                    }
+                }
+            }
+        }
+        let movie=movieIterator(movieArray);
+        for(let i=0;i<movieArray.length+1;i++){
+        console.log(movie.next());
+        }
+    </script>
+</body>
+</html>
